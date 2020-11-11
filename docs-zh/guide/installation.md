@@ -1,6 +1,6 @@
 # 安装
 
-## Vue CLI Setup
+## Vue CLI 安装
 
 You can easily setup your Vue Class Component project by using [Vue CLI](https://cli.vuejs.org/). Run the following command to create a new project:
 
@@ -22,19 +22,19 @@ Press `y` for the question `Use class-style component syntax?`:
 
 You can answer the remaining questions as your preferences. After finishing this setup process, Vue CLI creates a new project directory with Vue Class Component installed.
 
-## Manual Setup
+## 手动安装
 
-If you prefer manual setup, install it via npm and configure your build tool.
+如果你喜欢手动设置，请通过npm安装它并配置你的构建工具。
 
 ### npm
 
-You can install Vue Class Component with `npm` command. Please make sure to also install Vue core library as Vue Class Component depends on it:
+你可以使用`npm`命令安装`Vue Class Component`。 请确保已经安装了`Vue`核心库，因为`Vue Class Component`依赖它：
 
 ```sh
 $ npm install --save vue vue-class-component
 ```
 
-You can use `yarn` command if you prefer:
+如果你更喜欢`yarn`也可以用`yarn`命令来安装:
 
 ```sh
 $ yarn add --save vue vue-class-component
@@ -45,7 +45,7 @@ $ yarn add --save vue vue-class-component
 To use Vue Class Component, you need to configure [TypeScript](https://www.typescriptlang.org/) or [Babel](https://babeljs.io/) in your project as it relies on [ECMAScript stage 1 decorators](https://github.com/wycats/javascript-decorators/blob/master/README.md) which is needed to transpile to run on browsers.
 
 ::: warning
-It does not support the stage 2 decorators yet since TypeScript transpiler still only supports the old decorators spec.
+它不支持 stage 2 装饰器，因为TypeScript Transpiler现在仅支持旧的装饰器规范。
 :::
 
 #### TypeScript
@@ -66,13 +66,13 @@ Create `tsconfig.json` on your project root and specify `experimentalDecorators`
 
 #### Babel
 
-Install `@babel/plugin-proposal-decorators` and `@babel/plugin-proposal-class-properties`:
+安装 `@babel/plugin-proposal-decorators` 和 `@babel/plugin-proposal-class-properties`:
 
 ```sh
 $ npm install --save-dev @babel/plugin-proposal-decorators @babel/plugin-proposal-class-properties
 ```
 
-Then configure `.babelrc` on your project root:
+然后在你的根目录下配置 `.babelrc`文件：
 
 ```json
 {
