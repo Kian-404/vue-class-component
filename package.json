@@ -25,7 +25,10 @@
     "test": "npm run build && webpack --config test/webpack.config.js && mocha test/test.build.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "release": "bash build/release.sh"
+    "docs:dev-zh": "vuepress dev docs-zh",
+    "docs:build-zh": "vuepress build docs-zh",
+    "release": "bash build/release.sh",
+    "deploy": "bash build/deploy.sh"
   },
   "repository": {
     "type": "git",
