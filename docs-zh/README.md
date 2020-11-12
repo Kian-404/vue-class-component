@@ -1,6 +1,6 @@
 # 总览
 
-`Vue Class Component` 是一个库，可让您使用`Class`语法的样式编写你的`Vue`组件。 例如，下面是一个用`Vue Class Component`编写的简单计数器组件：
+`Vue Class Component` 是一个库，可以让你使用`Class`语法的样式编写你的`Vue`组件。 例如，下面是一个用`Vue Class Component`编写的简单计数器组件：
 
 ```vue
 <template>

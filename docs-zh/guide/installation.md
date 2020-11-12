@@ -2,25 +2,24 @@
 
 ## Vue CLI 安装
 
-You can easily setup your Vue Class Component project by using [Vue CLI](https://cli.vuejs.org/). Run the following command to create a new project:
+你可以很容易的使用[Vue CLI](https://cli.vuejs.org/)来安装`Vue Class Component`。运行如下命令创建一个新的项目：
 
 ```sh
 $ vue create hello-world
 ```
-
-You will be asked whether using preset or not. Select "Manually select features":
+系统将询问你是否使用预设。 选择"Manually select features":
 
 ![](../assets/vue-cli-1.png)
 
-Check TypeScript feature to use Vue Class Component. You can add other features in addition if you need:
+选择 `TypeScript`用来使用`Vue Class Component`。你也可以添加你需要的其他的功能：
 
 ![](../assets/vue-cli-2.png)
 
-Press `y` for the question `Use class-style component syntax?`:
+输入`y`去选择使用`Use class-style component syntax?`:
 
 ![](../assets/vue-cli-3.png)
 
-You can answer the remaining questions as your preferences. After finishing this setup process, Vue CLI creates a new project directory with Vue Class Component installed.
+你也可以根据自己的喜好配置其他功能。完成此安装过程后，`Vue CLI`会创建一个新的安装使用`Vue Class Component`的项目目录。
 
 ## 手动安装
 
@@ -40,9 +39,9 @@ $ npm install --save vue vue-class-component
 $ yarn add --save vue vue-class-component
 ```
 
-### Build Setup
+### 构建设置
 
-To use Vue Class Component, you need to configure [TypeScript](https://www.typescriptlang.org/) or [Babel](https://babeljs.io/) in your project as it relies on [ECMAScript stage 1 decorators](https://github.com/wycats/javascript-decorators/blob/master/README.md) which is needed to transpile to run on browsers.
+要使用 `Vue Class Component`你需要配置[TypeScript](https://www.typescriptlang.org/) 或者[Babel](https://babeljs.io/) 因为你的项目依赖[ECMAScript stage 1 decorators](https://github.com/wycats/javascript-decorators/blob/master/README.md) 需要进行转换才能在浏览器上运行。
 
 ::: warning
 它不支持 stage 2 装饰器，因为TypeScript Transpiler现在仅支持旧的装饰器规范。
@@ -50,9 +49,9 @@ To use Vue Class Component, you need to configure [TypeScript](https://www.types
 
 #### TypeScript
 
-Create `tsconfig.json` on your project root and specify `experimentalDecorators` option so that it transpiles decorator syntax:
+在你的项目的根目录下创建 `tsconfig.json`并且指明 `experimentalDecorators` 配置以便可以转化装饰器语法。
 
-```json
+```json {7}
 {
   "compilerOptions": {
     "target": "es5",
@@ -83,11 +82,11 @@ $ npm install --save-dev @babel/plugin-proposal-decorators @babel/plugin-proposa
 }
 ```
 
-Note that `legacy` and `loose` option are needed as Vue Class Component only supports stage 1 (legacy) decorator spec yet.
+注意由于 `Vue Class Component`现在仅支持 `stage 1(legacy)` 装饰器规范，因此需要 `legacy`和 `loose` 选项。
 
 ## CDN
 
-[unpkg.com](https://unpkg.com/) provides npm-based CDN links. You can choose specific version of Vue Class Component by replacing the `@latest` part in url (e.g. `https://unpkg.com/vue-class-component@7.2.2/dist/vue-class-component.js` to use version 7.2.2).
+[unpkg.com](https://unpkg.com/)提供了基于 `npm`的 CDN连接。你可以替换 ulr中的 `@latest`部分来选择特定版本的 `Vue Class Component` (例如: `https://unpkg.com/vue-class-component@7.2.2/dist/vue-class-component.js` 使用7.2.2的版本)。
 
 ```html
 <!-- UMD build -->
@@ -103,15 +102,15 @@ Note that `legacy` and `loose` option are needed as Vue Class Component only sup
 <script src="https://unpkg.com/vue-class-component@latest/dist/vue-class-component.esm.browser.min.js"></script>
 ```
 
-## Different Builds
+## 不同的版本
 
-Vue Class Component is provided as different builds for different environments and usages.
+`Vue Class Component` 针对不同的环境和用途提供不同的构建版本。
 
-- **For development**
+- **开发环境**
   - `vue-class-component.js` (UMD)
   - `vue-class-component.common.js` (CommonJS)
   - `vue-class-component.esm.js` (ES Module for bundlers)
   - `vue-class-component.esm.browser.js` (ES Module for browsers)
-- **For production (minified)**
+- **生产环境 (minified)**
   - `vue-class-component.min.js` (UMD)
   - `vue-class-component.esm.browser.min.js` (ES Module for browsers)

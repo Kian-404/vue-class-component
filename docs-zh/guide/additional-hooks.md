@@ -1,6 +1,6 @@
 # Additional Hooks
 
-If you use some Vue plugins like [Vue Router](https://router.vuejs.org/), you may want class components to resolve hooks that they provide. In that case, `Component.registerHooks` allows you to register such hooks:
+如果你使用了某些 `Vue`的插件如 [Vue Router](https://router.vuejs.org/)，你可能希望类组件解析它们提供的钩子函数。 在这种情况下，`Component.registerHooks`允许你注册这些钩子函数：
 
 ```js
 // class-component-hooks.js
@@ -14,7 +14,7 @@ Component.registerHooks([
 ])
 ```
 
-After registering the hooks, class component realizes them as class prototype methods:
+注册完这些钩子函数之后，类组件可以在方法属性中实现它们：
 
 ```js
 import Vue from 'vue'
@@ -41,7 +41,7 @@ export default class HelloWorld extends Vue {
 }
 ```
 
-It is recommended to write this registration code in a separated file because you have to register them before any component definitions. You can make sure the execution order by putting `import` statement for the hooks registration on the top of the main file:
+建议你将这些注册代码写入到一个单独的文件中，因为你必须在任何组件定义之前对其进行注册。你可以通过在主文件的顶部放置钩子注册的 `import` 语句来确保执行顺序：
 
 ```js
 // main.js

@@ -1,6 +1,6 @@
 # Class Component
 
-`@Component` decorator makes your class a Vue component:
+`@Component` 装饰器确保你的 `class` 是一个 `Vue` 组件
 
 ```js
 import Vue from 'vue'
@@ -13,7 +13,7 @@ export default class HelloWorld extends Vue {}
 
 ## Data
 
-Initial `data` can be declared as class properties:
+初始化 `data` 可以声明为类属性：
 
 ```vue
 <template>
@@ -32,9 +32,9 @@ export default class HelloWorld extends Vue {
 </script>
 ```
 
-The above component renders `Hello World!` in the `<div>` element as `message` is component data.
+在上面的组件中 `message` 数据在 `<div>` 元素中渲染出 `Hello World!` 。
 
-Note that if the initial value is `undefined`, the class property will not be reactive which means the changes for the properties will not be detected:
+请注意，如果属性的初始值是 `undefined`，则 `class` 属性将是不起作用的，这意味着将不会检测到对属性的更改：
 
 ```js
 import Vue from 'vue'
@@ -46,8 +46,7 @@ export default class HelloWorld extends Vue {
   message = undefined
 }
 ```
-
-To avoid this, you can use `null` value or use `data` hook instead:
+去避免这样使用，你可以使用 `null`或者使用 `data` 钩子函数代替：
 
 ```js
 import Vue from 'vue'
@@ -70,7 +69,7 @@ export default class HelloWorld extends Vue {
 
 ## Methods
 
-Components `methods` can be declared directly as class prototype methods:
+组件的 `methods`可以直接被定义为类的方法属性：
 
 ```vue
 <template>
@@ -93,7 +92,7 @@ export default class HelloWorld extends Vue {
 
 ## Computed Properties
 
-Computed properties can be declared as class property getter / setter:
+计算属性可以被定义为类的 `getter / setter` 属性：
 
 ```vue
 <template>
@@ -126,7 +125,7 @@ export default class HelloWorld extends Vue {
 
 ## Hooks
 
-`data`, `render` and all Vue lifecycle hooks can be directly declared as class prototype methods as well, but you cannot invoke them on the instance itself. When declaring custom methods, you should avoid these reserved names.
+`data`, `render` 和所有的 `Vue` 生命周期函数都可以直接声明为类的原型方法，但是你不能在实例本身调用它们。当声明自定义方法的时候，你应该避免使用这些保留的名称。
 
 ```jsx
 import Vue from 'vue'
@@ -148,7 +147,7 @@ export default class HelloWorld extends Vue {
 
 ## Other Options
 
-For all other options, pass them to the decorator function:
+对应所有其他的选项，把它们都传递给装饰器函数：
 
 ```vue
 <template>
