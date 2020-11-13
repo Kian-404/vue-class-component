@@ -1,4 +1,4 @@
-# Class Component
+# 类组件
 
 `@Component` 装饰器确保你的 `class` 是一个 `Vue` 组件
 

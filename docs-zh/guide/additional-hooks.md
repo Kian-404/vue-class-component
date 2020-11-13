@@ -1,4 +1,4 @@
-# Additional Hooks
+# 附带的钩子函数
 
 如果你使用了某些 `Vue`的插件如 [Vue Router](https://router.vuejs.org/)，你可能希望类组件解析它们提供的钩子函数。 在这种情况下，`Component.registerHooks`允许你注册这些钩子函数：
 

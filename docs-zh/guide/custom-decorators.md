@@ -1,12 +1,12 @@
-# Custom Decorators
+# 自定义装饰器
 
-You can extend the functionality of this library by creating your own decorators. Vue Class Component provides `createDecorator` helper to create custom decorators. `createDecorator` expects a callback function as the 1st argument and the callback will receive following arguments:
+你可以通过创建自己的装饰器来扩展此库的功能。 `Vue Class Component` 提供了 `createDecorator` 帮助去创建自定义的装饰器。 `createDecorator`期望回调函数作为第一个参数，并且该回调函数的接收的参数如下：
 
-- `options`: Vue component options object. Changes for this object will affect the provided component.
-- `key`: The property or method key that the decorator is applied.
-- `parameterIndex`: The index of a decorated argument if the custom decorator is used for an argument.
+- `options`: Vue组件选项对象。改变这个对象将会影响提供的组件。
+- `key`: 装饰器应用的属性或者方法的键。
+- `parameterIndex`: 如果自定义修饰符用于参数，则修饰参数的索引。
 
-Example of creating `Log` decorator which prints a log message with the method name and passed arguments when the decorated method is called:
+例如创建一个 `log` 装饰器，该装饰器在装饰方法被调用时输出方法名称和传递的参数的日志消息。
 
 ```js
 // decorators.js
@@ -28,7 +28,7 @@ export const Log = createDecorator((options, key) => {
 })
 ```
 
-Using it as a method decorator:
+使用装饰器方法
 
 ```js
 import Vue from 'vue'
@@ -45,7 +45,7 @@ class MyComp extends Vue {
 }
 ```
 
-In the above code, when `hello` method is called with `42`, the following log will be printed:
+在上面的代码中，当 `hello` 方法被调用时传递参数 `42`，下面的日志将会被打印：
 
 ```
 Invoked: hello( 42 )

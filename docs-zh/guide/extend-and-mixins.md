@@ -1,8 +1,8 @@
-# Extend and Mixins
+# 继承和混入
 
 ## Extend
 
-You can extend an existing class component as native class inheritance. Imagine you have following super class component:
+你可以用存在的类组件作为继承组件的原生类。想象一下你又如下的父组件：
 
 ```js
 // super.js
@@ -16,7 +16,7 @@ export default class Super extends Vue {
 }
 ```
 
-You can extend it by using native class inheritance syntax:
+你可以使用原始类继承语法进行扩展：
 
 ```js
 import Super from './super'
@@ -31,13 +31,13 @@ export default class HelloWorld extends Super {
 }
 ```
 
-Note that every super class must be a class component. In other words, it needs to inherit `Vue` constructor as an ancestor and be decorated by `@Component` decorator.
+注意每个父类都必须是一个类组件。换句话说，它需要继承 `Vue`构造函数作为超类，并且由`@Component`装饰器进行装饰。
 
 ## Mixins
 
-Vue Class Component provides `mixins` helper function to use [mixins](https://vuejs.org/v2/guide/mixins.html) in class style manner. By using `mixins` helper, TypeScript can infer mixin types and inherit them on the component type.
+`Vue Class Component` 提供了 `mixins` 函数在类风格中去使用  [mixins](https://vuejs.org/v2/guide/mixins.html)。通过使用 `mixins`，`TypeScript`可以推断`mixin`类型并在组件类型上继承它们。
 
-Example of declaring mixins `Hello` and `World`:
+例如定义混入 `Hello` 和 `World`
 
 ```js
 // mixins.js
@@ -56,7 +56,7 @@ export class World extends Vue {
 }
 ```
 
-Use them in a class style component:
+在类风格组件中使用它们
 
 ```js
 import Component, { mixins } from 'vue-class-component'
@@ -72,4 +72,4 @@ export class HelloWorld extends mixins(Hello, World) {
 }
 ```
 
-As same as super class, all mixins must be declared as class components.
+和父类相同，所有的 `mixins` 必须被定义为类组件。
