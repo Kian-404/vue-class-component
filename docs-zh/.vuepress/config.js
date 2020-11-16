@@ -6,9 +6,10 @@ module.exports = {
   themeConfig: {
     
     repo: 'Kian-404/vue-class-component',
-    docsDir: 'docs',
+    docsDir: 'docs-zh',
+    docsBranch: 'dev',
     editLinks: true,
-    editLinkText:'在 GitHub 上编辑此页',
+    editLinkText:'帮助我们改善此页面!',
     lastUpdated: '最新更新时间',
 
     nav: [

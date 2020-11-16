@@ -1,10 +1,10 @@
-# Property Type Declaration
+# 属性类型定义
 
-Sometimes, you have to define component properties and methods out of a class component. For example, [Vuex](https://github.com/vuejs/vuex), the official state management library for Vue, provides `mapGetters` and `mapActions` helpers to map a store to component properties and methods. These helpers need to be used in a component options object.
+有时，你必须要在类组件之外定义属性和方法。例如，`Vue` 的官方状态管理仓库 [Vuex](https://github.com/vuejs/vuex) 提供了 `mapGetters` 和 `mapActions` 辅助器，将 `store` 中的属性和方法映射到组件中去。 这些辅助器需要在组件选项对象中使用。
 
-Even in this case, you can pass component options to the `@Component` decorator's argument. However it does not automatically declare the properties and methods on type level while they work on runtime.
+即使在这种情况下，您也可以将组件选项传递给 `@Component` 装饰器的参数。 但是，当它们在 `runtime` 时运行时，它不会在类型级别自动声明属性和方法。
 
-You need to manually declare their types in the class component:
+你需要在类组件中手动声明其类型：
 
 ```ts
 import Vue from 'vue'

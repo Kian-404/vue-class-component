@@ -1,6 +1,6 @@
-# Props Definition
+# Props 定义
 
-There is no dedicated API for props definition that Vue Class Component provides. You, however, can do that by using canonical `Vue.extend` API:
+`Vue Class Component` 组件没有提供用于 `props` 的专用API。但是，您可以使用 `Vue.extend` API 来做到这一点：
 
 ```vue
 <template>
@@ -29,9 +29,9 @@ export default class Greeting extends GreetingProps {
 </script>
 ```
 
-As `Vue.extend` infers defined prop types, it is possible to use them in your class component by extending it.
+当 `Vue.extend` 推断定义的prop类型时，可以通过扩展它在类组件中使用它们。
 
-If you have a super class component or mixins to extend, use `mixins` helper to combine defined props with them:
+如果你有一个父组件或者 `mixins` 要去继承，用 `mixins` 辅助器去结合定义 `props` 和父组件：
 
 ```vue
 <template>
