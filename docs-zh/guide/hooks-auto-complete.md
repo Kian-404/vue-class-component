@@ -1,6 +1,6 @@
-# Hooks Auto-complete
+# Hooks 自动完成
 
-Vue Class Component provides built-in hook types, which enables auto-complete for `data`, `render` and other lifecycle hooks in class component declarations, for TypeScript. To enable it, you need to import hooks type located at `vue-class-component/hooks`.
+`Vue Class Component` 提供了内置的钩子类型，可为 `TypeScript` 的类组件声明中的 `data`，`render` 和其他生命周期钩子函数实现自动完成。 要启用它，你需要导入位于`vue-class-component/hooks` 的钩子类型。
 
 ```ts
 // main.ts
@@ -13,7 +13,7 @@ new Vue({
 }).$mount('#app')
 ```
 
-If you want to make it work with custom hooks, you can manually add it by yourself:
+你如果想要使其与自定义钩子函数一起使用，你可以自己手动添加它：
 
 ```ts
 import Vue from 'vue'

@@ -1,7 +1,6 @@
-# Annotate Component Type in Decorator
+# 装饰器组件类型
 
-There are cases that you want to use your component type on a function in `@Component` decorator argument.
-For example, to access component methods in a watch handler:
+在某些情况下，你想在 `@Component` 装饰器参数中的函数上使用组件类型。 例如，要访问监听函数中的组件方法：
 
 ```ts
 @Component({
@@ -21,9 +20,9 @@ class Post extends Vue {
 }
 ```
 
-The above code produces a type error that indicates `fetchPost` does not exist on `this` in the watch handler. This happens because `this` type in `@Component` decorator argument is the base `Vue` type.
+上面的代码产生类型错误，显示监听函数中不存在 `fetchPost`。 发生这种情况是因为 `@Component` 装饰器参数中的此类型是基本Vue类型。
 
-To use your own component type (in this case `Post`), you can annotate the decorator through its type parameter.
+要使用你自己的组件类型(在本例中为`Post`)，可以通过装饰器的 `type` 参数对其进行注释。
 
 ```ts
 // Annotate the decorator with the component type 'Post' so that `this` type in
